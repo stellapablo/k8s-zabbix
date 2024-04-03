@@ -59,7 +59,10 @@ spec:
           #     name: db-secret
           #     key: db-root-pass
           - name: MYSQL_DATABASE
-            value: "zabbix_proxy"
+            valueFrom:
+             secretKeyRef:
+              name: db-secret
+              key: db-zbx-name
           - name: DB_SERVER_HOST
             valueFrom:
              secretKeyRef:
