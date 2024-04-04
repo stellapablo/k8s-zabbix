@@ -14,3 +14,11 @@ Zabbix MELI
 .....................................
 
 7. Zabbix-mysql RDS
+
+
+agente
+ZBX_SERVER_HOST 10.100.145.67
+
+
+proxy 
+ZBX_SERVER_HOST 10.100.145.67
