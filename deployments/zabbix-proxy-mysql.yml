@@ -20,8 +20,8 @@ spec:
         name: zabbix-proxy-mysql
         app: zabbix
     spec:
-      volumes:
-       - name: mysql-tls-certs
+      # volumes:
+      #  - name: mysql-tls-certs
         #  secret:
         #    secretName: zabbix-mysql-client-tls-certs
       containers:
@@ -194,10 +194,10 @@ spec:
             value: ""
           - name: DEBUG_MODE
             value: "false"
-          volumeMounts:
-          - mountPath: "/tmp/secrets"
-            name: mysql-tls-certs
-            readOnly: true
+          # volumeMounts:
+          # - mountPath: "/tmp/secrets"
+          #   name: mysql-tls-certs
+          #   readOnly: true
           securityContext:
             capabilities: {}
             privileged: false
